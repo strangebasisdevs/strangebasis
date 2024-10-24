@@ -3,20 +3,17 @@ default_language_version:
 
 repos:
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v3.3.0
+    rev: v3.30.0
     hooks:
       - id: commitizen
         stages: [commit-msg]
-  # - repo: local
-  #   hooks:
-  #     - id: update-changelog
-  #       name: update-changelog
-  #       entry: python scripts/update_changelog.py
-  #       language: python
-  #       stages: [pre-commit]
-  #       additional_dependencies: ['commitizen']
+        additional_dependencies:
+          - commitizen-tools
+        args:
+          - --changelog-filename=wiki/changelog.md
+          - --changelog-append=false
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v5.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -30,7 +27,7 @@ repos:
     hooks:
       - id: black
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.11.0
+    rev: v1.13.0
     hooks:
       - id: mypy
         exclude: ^dependencies/|^\.cache/
