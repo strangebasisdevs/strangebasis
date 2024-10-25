@@ -1,0 +1,44 @@
+default_language_version:
+    python: python3.12
+
+repos:
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v3.30.0
+    hooks:
+      - id: commitizen
+        stages: [commit-msg]
+        additional_dependencies:
+          - commitizen-tools
+        args:
+          - --changelog-filename=wiki/changelog.md
+          - --changelog-append=false
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-json
+      - id: check-merge-conflict
+  - repo: https://github.com/psf/black
+    rev: 24.10.0
+    hooks:
+      - id: black
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.13.0
+    hooks:
+      - id: mypy
+        exclude: ^dependencies/|^\.cache/
+        # additional_dependencies: []
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.1.1
+    hooks:
+      - id: flake8
+        exclude: ^dependencies/
+        args: [--max-line-length=88]
