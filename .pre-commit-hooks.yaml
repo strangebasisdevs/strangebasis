@@ -2,4 +2,4 @@
   name: strangebasis shared hooks
   description: A digital toolbox and coding standards repository for centrally updating hooks contribution patterns.
   language: python
-  entry: poetry run strangebasis hooks
+  entry: poetry run python -m strangebasis hooks
