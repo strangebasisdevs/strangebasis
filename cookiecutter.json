@@ -1,11 +1,11 @@
 {
-    "project_name": "Strange Basis",
+    "project_name": "strangebasis-derivative",
     "author_name": "Skylar DonLevy",
-    "description": "A digital toolbox and coding standards repository",
-    "include_ci": ["yes", "no"],
+    "author_email": "skylar.donlevy.dev@gmail.com",
+    "description": "A description for this project- riveting and informative.",
+    "python_version": "3.12",
     "project_type": ["Prototype", "Production (future)"],
     "_copy_without_render": [
-        "*.pyc",
-        "*.md"
+        "*.pyc"
     ]
 }

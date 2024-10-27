@@ -1,2 +1,2 @@
 # {{cookiecutter.project_name}}
-#     Copyright (C) {{ cookiecutter.year }}  Skylar DonLevy
+#     Copyright (C) {% now 'utc', '%Y' %}  {{ cookiecutter.author_name }}
