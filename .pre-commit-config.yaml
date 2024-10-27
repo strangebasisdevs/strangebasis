@@ -7,11 +7,6 @@ repos:
     hooks:
       - id: commitizen
         stages: [commit-msg]
-        additional_dependencies:
-          - commitizen-tools
-        args:
-          - --changelog-filename=wiki/changelog.md
-          - --changelog-append=false
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
@@ -36,9 +31,3 @@ repos:
     rev: 5.13.2
     hooks:
       - id: isort
-  - repo: https://github.com/pycqa/flake8
-    rev: 7.1.1
-    hooks:
-      - id: flake8
-        exclude: ^dependencies/
-        args: [--max-line-length=88]

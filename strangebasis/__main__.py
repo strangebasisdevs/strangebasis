@@ -1,9 +1,12 @@
+# This "Strange Basis" serves as a baseline of productivity across my body of work. It's a system that works best for me; my digital toolbox. Use at your own risk.
+#     Copyright (C) 2024  Skylar DonLevy
+
 import argparse
 
 import pre_commit.main
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description="Strange Basis CLI")
     subparsers = parser.add_subparsers(dest="command")
 
@@ -19,10 +22,10 @@ def main():
     args.func(args)
 
 
-def hooks(args):
+def hooks(args: argparse.Namespace) -> int:
     # parser = argparse.ArgumentParser(description="Run shared hooks")
 
-    result = pre_commit.main.main(["run", "--all-files"])
+    result: int = pre_commit.main.main(["run", "--all-files"])
 
     if result == 0:
         print("All pre-commit hooks passed!")
