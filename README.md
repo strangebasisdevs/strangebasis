@@ -14,3 +14,18 @@ You should already be in the poetry shell. If not, enter the interactive virtual
 2. `python -m strangebasis hooks`
    1. This runs all the pre-commit hooks (changes to these hooks must be explicitly installed *first* using `git add .pre-commit-config.yaml; pre-commit install`)
    2. The importance of testing the hooks in this manner is because mimics how all the other repositories will run the shared hooks.
+
+
+### Running Cookiecutter
+
+1. Make sure you have cookiecutter installed: `pip install cookiecutter`
+2. Run cookiecutter: `cookiecutter .`
+
+### Contributing
+
+1. **This is a personal repository** for quickly spinning up robust Python projects according to my standards. It utilizes cookiecutter to templatize my work. I welcome contributions in the following manner.
+2. Fork it (https://github.com/skylardonlevy/strangebasis/)
+3. Create your feature branch (`git checkout -b feature/fooBar`)
+4. Commit your changes (`git commit -am 'Add some fooBar'`)
+5. Push to the branch (`git push origin feature/fooBar`)
+6. Create a new Pull Request

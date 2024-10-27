@@ -1,13 +1,15 @@
 [tool.poetry]
-name = "strangebasis"
+name = "{{cookiecutter.project_name}}"
 version = "0.1.0"
-description = "A digital toolbox and coding standards repository"
-authors = ["Skylar <skylar.donlevy.dev@gmail.com>"]
+description = "{{cookiecutter.project_description}}"
+authors = ["Skylar DonLevy<skylar.donlevy.dev@gmail.com>"]
 license = "AGPL-3.0"
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+
+[tool.poetry.dev-dependencies]
 black = "^24.10.0"
 mypy = "^1.13.0"
 pre-commit = "^4.0.1"
@@ -17,7 +19,6 @@ wemake-python-styleguide = "^0.19.2"
 nitpick = "^0.35.0"
 cookiecutter = "^2.6.0"
 pytest = "^8.3.3"
-pytest-mypy-plugins = "^3.1.2"
 
 
 [build-system]

@@ -1,0 +1,11 @@
+{
+    "project_name": "Strange Basis",
+    "author_name": "Skylar DonLevy",
+    "description": "A digital toolbox and coding standards repository",
+    "include_ci": ["yes", "no"],
+    "project_type": ["Prototype", "Production (future)"],
+    "_copy_without_render": [
+        "*.pyc",
+        "*.md"
+    ]
+}
