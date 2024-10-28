@@ -1,12 +1,29 @@
-# This "Strange Basis" serves as a baseline of productivity across my body of work. It's a system that works best for me; my digital toolbox. Use at your own risk.
+# This "Strange Basis" is my digital toolbox. Use at your own risk.
 #     Copyright (C) 2024  Skylar DonLevy
+"""
+strangebasis
 
+This is my personal digital toolbox and a module to port all of my
+coding standards into my other projects. Cookiecutter perfection.
+
+"""
 import argparse
 
 import pre_commit.main
 
 
 def main() -> None:
+    """
+    Entry point for the Strange Basis command-line interface (CLI).
+
+    This function sets up the argument parser for the CLI, adding
+    a subparser for the "hooks" command. If a valid command is
+    provided, it calls the corresponding function with the parsed
+    arguments.
+
+    Returns:
+        None
+    """
     parser = argparse.ArgumentParser(description="Strange Basis CLI")
     subparsers = parser.add_subparsers(dest="command")
 
@@ -22,9 +39,20 @@ def main() -> None:
     args.func(args)
 
 
-def hooks(args: argparse.Namespace) -> int:
-    # parser = argparse.ArgumentParser(description="Run shared hooks")
+def hooks() -> int:
+    """
+    Run all pre-commit hooks on the entire repository.
 
+    This function runs all the pre-commit hooks on all files in the
+    repository. If any of the hooks fail, the function prints a message
+    indicating that some hooks failed and returns the appropriate exit
+    status.
+
+    Returns:
+        int: The exit status of the pre-commit hook runner. If all hooks
+            passed, this is 0; otherwise, it is a non-zero value indicating
+            that some hooks failed.
+    """
     result: int = pre_commit.main.main(["run", "--all-files"])
 
     if result == 0:

@@ -1,6 +1,13 @@
 # {{cookiecutter.project_name}}
 #     Copyright (C) {% now 'utc', '%Y' %}  {{ cookiecutter.author_name }}
+"""
+Tests for {{cookiecutter.project_name}}
 
+These tests verify that the module can be installed via Poetry before other
+tests are run. The "session" scope means that this fixture is only run once
+before all tests, and "autouse" means that it is automatically applied to all
+tests.
+"""
 import subprocess
 
 import pytest

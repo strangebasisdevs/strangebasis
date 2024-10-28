@@ -1,6 +1,12 @@
-# This "Strange Basis" serves as a baseline of productivity across my body of work. It's a system that works best for me; my digital toolbox. Use at your own risk.
+# This "Strange Basis" is my digital toolbox. Use at your own risk.
 #     Copyright (C) 2024  Skylar DonLevy
+"""
+Tests for the strangebasis module using pytest.
 
+This file contains fixture definitions and configuration settings for tests.
+The conftest.py file is commonly used in pytest projects to define fixtures
+that can be shared across multiple test files, and to configure pytest settings.
+"""
 import subprocess
 
 import pytest
