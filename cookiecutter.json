@@ -1,11 +1,9 @@
 {
-    "project_name": "strangebasis-derivative",
-    "author_name": "Skylar DonLevy",
-    "author_email": "skylar.donlevy.dev@gmail.com",
-    "description": "A description for this project- riveting and informative.",
-    "python_version": "3.12",
-    "project_type": ["Prototype", "Production (future)"],
-    "_copy_without_render": [
-        "*.pyc"
-    ]
+  "project_name": "strangebasis-derivative",
+  "author_name": "Skylar DonLevy",
+  "author_email": "skylar.donlevy.dev@gmail.com",
+  "description": "A description for this project- riveting and informative.",
+  "python_version": "3.12",
+  "project_type": ["Prototype", "Production (future)"],
+  "_copy_without_render": ["*.pyc"]
 }

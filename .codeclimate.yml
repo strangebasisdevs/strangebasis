@@ -1,0 +1,31 @@
+plugins:
+  editorconfig:
+    enabled: true
+  markdownlint:
+    enabled: false
+  pylint:
+    enabled: false
+  sonar-python:
+    enabled: true
+  fixme:
+    enabled: false
+  git-legal:
+    enabled: true
+  shellcheck:
+    enabled: true
+  bandit:
+    enabled: true
+  pep8:
+    enabled: false
+  radon:
+    enabled: true
+    config:
+      threshold: C
+version: "2"
+checks:
+  file-lines:
+    config:
+      threshold: 1000
+  method-complexity:
+    config:
+      threshold: 10

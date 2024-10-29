@@ -1,0 +1,14 @@
+{
+  "name": "strangebasis",
+  "release": {
+    "plugins": [
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skylardonlevy/strangebasis.git"
+  },
+  "version": "0.1.3"
+}

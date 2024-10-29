@@ -15,8 +15,9 @@ import pytest
 @pytest.mark.parametrize("args", [["hooks"]])
 def test_strangebasis_hooks(args: list[str]) -> None:
     """
-    Test running the `strangebasis` command with the `hooks` argument. This is
-    redundant since `pre-commit` hooks should be run automatically.
+    Test running the `strangebasis` command with the `hooks` argument.
+
+    This is redundant since `pre-commit` hooks should be run automatically.
 
     Args:
         args (list[str]): The arguments to pass to the `strangebasis` command.

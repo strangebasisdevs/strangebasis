@@ -8,13 +8,15 @@ Author: {{ cookiecutter.author_name }}
 
 ### Prerequisites
 
-* Python 3.12
-* pip
+- Python 3.12
+- pip
 
 ### First Time Project Setup (Future NIX? or Ansible?)
+
 These steps are intended to follow the "cookiecut" of the strangebasis standards. Some are pre-requisite and can be verified quickly, especially if you've cookiecut strangebasis on this machine already.
 
 Details below, fast track here:
+
 ```
 poetry install; poetry shell
 git init; git add -A; pre-commit install; pre-commit run --all-files; pytest; git add -A; cz c
@@ -73,18 +75,18 @@ You can also use the `poetry remove` command to remove a dependency from your pr
 
 Please answer the following questions to help define the usage of your project:
 
-* What is the main purpose of your project?
-* What are the main features of your project?
-* How should users run your project?
-* What are the expected inputs and outputs of your project?
-* Are there any specific command line arguments or options?
-* Are there any specific environment variables to be set?
-* Are there any specific dependencies to be installed?
+- What is the main purpose of your project?
+- What are the main features of your project?
+- How should users run your project?
+- What are the expected inputs and outputs of your project?
+- Are there any specific command line arguments or options?
+- Are there any specific environment variables to be set?
+- Are there any specific dependencies to be installed?
 
 ### Getting Started
 
 1. Run the project: `poetry install; python -m <project_name>`
-   * What are the common uses? Anything more than running main?
+   - What are the common uses? Anything more than running main?
 
 ### Contribution Guidelines
 
@@ -94,9 +96,9 @@ Please answer the following questions to help define the usage of your project:
 
 ## License and Copyright
 
-* License: GNU AFFERO GENERAL PUBLIC LICENSE
-* Copyright: {% now 'utc', '%Y' %}, {{ cookiecutter.author_name }}
+- License: GNU AFFERO GENERAL PUBLIC LICENSE
+- Copyright: {% now 'utc', '%Y' %}, {{ cookiecutter.author_name }}
 
 ## Contact
 
-* Author: [Author Name](mailto:skylar.donlevy.dev@gmail.com)
+- Author: [Author Name](mailto:skylar.donlevy.dev@gmail.com)

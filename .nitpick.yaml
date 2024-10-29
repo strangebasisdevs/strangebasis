@@ -1,0 +1,8 @@
+style:
+  files:
+    .pre-commit-config.yaml:
+      - repo: https://github.com/pre-commit/mirrors-prettier
+        hooks:
+          - id: prettier
+            stages:
+              - pre-commit

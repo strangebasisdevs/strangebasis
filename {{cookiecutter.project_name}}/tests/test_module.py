@@ -1,7 +1,7 @@
 # {{cookiecutter.project_name}}
 #     Copyright (C) {% now 'utc', '%Y' %}  {{ cookiecutter.author_name }}
 """
-Tests for{{cookiecutter.project_name}}
+Tests for{{cookiecutter.project_name}}.
 
 These tests verify the module can be called from the command line.
 
@@ -27,8 +27,5 @@ def test_module() -> None:
     )
 
     assert module_run_result.returncode == 0
-    assert (
-        module_run_result.stdout.decode().strip()
-        == "Hello from {{cookiecutter.project_name}}!"
-    )
+    assert module_run_result.stdout.decode().strip() == "Hello from {{cookiecutter.project_name}}!"
     assert module_run_result.stderr.decode() == ""

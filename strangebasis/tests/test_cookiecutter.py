@@ -1,8 +1,7 @@
 # This "Strange Basis" is my digital toolbox. Use at your own risk.
 #     Copyright (C) 2024  Skylar DonLevy
-"""
-Tests for the cookiecutter generation of projects using the local directory structure
-"""
+
+"""Tests for the cookiecutter generation of projects using the local directory structure."""
 import os
 import subprocess
 
@@ -37,6 +36,5 @@ def test_cookiecutter_project_creation(output_dir: str) -> None:
 
         # Print instructions for manually testing the generated project
         print(
-            "To manually test the generated project, navigate to "
-            f"'{output_dir}' and run your desired test commands."
+            "To manually test the generated project, navigate to " f"'{output_dir}' and run your desired test commands."
         )

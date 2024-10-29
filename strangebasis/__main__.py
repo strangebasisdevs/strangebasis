@@ -1,7 +1,7 @@
 # This "Strange Basis" is my digital toolbox. Use at your own risk.
 #     Copyright (C) 2024  Skylar DonLevy
 """
-strangebasis
+The strangebasis module.
 
 This is my personal digital toolbox and a module to port all of my
 coding standards into my other projects. Cookiecutter perfection.
