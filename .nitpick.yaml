@@ -1,3 +1,5 @@
+# This file overrides the built-in prettier style from nitpick so that
+# pre-commit will not thow a deprecation warning.
 style:
   files:
     .pre-commit-config.yaml:
