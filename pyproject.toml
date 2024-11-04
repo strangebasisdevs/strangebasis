@@ -6,22 +6,13 @@ authors = ["Skylar <skylar.donlevy.dev@gmail.com>"]
 license = "AGPL-3.0"
 readme = "README.md"
 
+[virtualenvs]
+in-project = true
+path = ".venv"
+
 [tool.poetry.dependencies]
 python = "^3.12"
-black = "^24.10.0"
-mypy = "^1.13.0"
-pre-commit = "^4.0.1"
-commitizen = "^3.30.0"
-isort = "^5.13.2"
-nitpick = "^0.35.0"
-cookiecutter = "^2.6.0"
-pytest = "^8.3.3"
-pytest-mypy-plugins = "^3.1.2"
-zap = "^2.1"
-coverage = "^7.6.4"
-pytest-cov = "^5.0.0"
-flake8-black = "^0.2.0"
-flake8-quotes = "^3.4.0"
+pytest-cov = "^6.0.0"
 
 [tool.poetry.extras]
 lint = [ "pylint",]
@@ -33,6 +24,19 @@ optional = true
 
 [tool.poetry.group.dev.dependencies]
 pylint = "^3.3.1"
+black = "^24.10.0"
+mypy = "^1.13.0"
+pre-commit = "^4.0.1"
+commitizen = "^3.30.0"
+isort = "^5.13.2"
+nitpick = "^0.35.0"
+cookiecutter = "^2.6.0"
+pytest = "^8.3.3"
+pytest-mypy-plugins = "^3.1.2"
+zap = "^2.1"
+coverage = "^7.6.4"
+flake8-black = "^0.2.0"
+flake8-quotes = "^3.4.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.8"]
@@ -55,20 +59,31 @@ line-length = 120
 
 [tool.nitpick]
 style = [
-  "py://nitpick/resources/any/commitizen",
-  "py://nitpick/resources/any/editorconfig",
-  "py://nitpick/resources/any/prettier",
-  "py://nitpick/resources/markdown/markdownlint",
-  "py://nitpick/resources/presets/nitpick",
-  "py://nitpick/resources/python/autoflake",
-  "py://nitpick/resources/python/bandit",
-  "py://nitpick/resources/python/flake8",
-  "py://nitpick/resources/python/github-workflow",
-  "py://nitpick/resources/python/isort",
-  "py://nitpick/resources/python/mypy",
-  "py://nitpick/resources/python/poetry",
-  "py://nitpick/resources/python/pylint",
-  "py://nitpick/resources/python/radon",
-  "py://nitpick/resources/python/readthedocs",
-  "py://nitpick/resources/python/312",
+    "py://nitpick/resources/any/codeclimate",
+    "py://nitpick/resources/any/commitizen",
+    "py://nitpick/resources/any/editorconfig",
+    "py://nitpick/resources/any/git-legal",
+    "py://nitpick/resources/any/pre-commit-hooks",
+    "py://nitpick/resources/javascript/package-json",
+    "py://nitpick/resources/markdown/markdownlint",
+    "py://nitpick/resources/python/absent",
+    "py://nitpick/resources/python/autoflake",
+    "py://nitpick/resources/python/bandit",
+    "py://nitpick/resources/python/black",
+    "py://nitpick/resources/python/flake8",
+    "py://nitpick/resources/python/github-workflow",
+    "py://nitpick/resources/python/isort",
+    "py://nitpick/resources/python/mypy",
+    "py://nitpick/resources/python/poetry",
+    "py://nitpick/resources/python/pre-commit-hooks",
+    "py://nitpick/resources/python/pylint",
+    "py://nitpick/resources/python/radon",
+    "py://nitpick/resources/python/readthedocs",
+    "py://nitpick/resources/python/sonar-python",
+    "py://nitpick/resources/python/tox",
+    "py://nitpick/resources/python/312",
+    "py://nitpick/resources/shell/bashate",
+    "py://nitpick/resources/shell/shellcheck",
+    "./nitpick/strangebasis-prettier.toml",
+    "./nitpick/strangebasis-pre-commit.toml",
 ]

@@ -9,26 +9,24 @@ coding standards into my other projects. Cookiecutter perfection.
 """
 import argparse
 
-import pre_commit.main
-
 
 def main() -> None:
     """
     Entry point for the Strange Basis command-line interface (CLI).
 
     This function sets up the argument parser for the CLI, adding
-    a subparser for the "hooks" command. If a valid command is
+    a subparser for the "hello" command. If a valid command is
     provided, it calls the corresponding function with the parsed
     arguments.
 
     Returns:
         None
     """
-    parser = argparse.ArgumentParser(description="Strange Basis CLI")
+    parser = argparse.ArgumentParser(description="Strange Basis CLI", prog="strangebasis")
     subparsers = parser.add_subparsers(dest="command")
 
-    hooks_parser = subparsers.add_parser("hooks", help="Run shared hooks")
-    hooks_parser.set_defaults(func=hooks)
+    hello_parser = subparsers.add_parser("hello", help="Say hello")
+    hello_parser.set_defaults(func=hello)
 
     args = parser.parse_args()
 
@@ -39,27 +37,21 @@ def main() -> None:
     args.func(args)
 
 
-def hooks() -> int:
+def hello(args: argparse.Namespace) -> int:
     """
-    Run all pre-commit hooks on the entire repository.
+    Print a hello message.
 
-    This function runs all the pre-commit hooks on all files in the
-    repository. If any of the hooks fail, the function prints a message
-    indicating that some hooks failed and returns the appropriate exit
-    status.
+    This function prints "Hello strange world!" to the console.
+
+    Args:
+        args: The command-line arguments passed to the function.
 
     Returns:
-        int: The exit status of the pre-commit hook runner. If all hooks
-            passed, this is 0; otherwise, it is a non-zero value indicating
-            that some hooks failed.
+        int: Always returns 0.
     """
-    result: int = pre_commit.main.main(["run", "--all-files"])
-
-    if result == 0:
-        print("All pre-commit hooks passed!")
-    else:
-        print("Some pre-commit hooks failed.")
-    return result
+    _ = args
+    print("Hello strange world!")
+    return 0
 
 
 if __name__ == "__main__":

@@ -1,0 +1,4 @@
+[run]
+omit =
+    {{cookiecutter.project_name}}/.gitignore
+    {{cookiecutter.project_name}}/LICENSE
