@@ -1,3 +1,7 @@
+[nitpick.meta]
+name = "strangebasis-pre-commit"
+url = "https://github.com/strangebasisdevs/strangebasis/blob/main/nitpick/strangebasis-pre-commit.toml"
+
 [".pre-commit-config.yaml".default_language_version]
 # https://pre-commit.com/#top_level-default_language_version
 python = "python3.12"
