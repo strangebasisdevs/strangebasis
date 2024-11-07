@@ -1415,6 +1415,20 @@ pytest = ">=4.6"
 testing = ["fields", "hunter", "process-tests", "pytest-xdist", "virtualenv"]
 
 [[package]]
+name = "pytest-dependency"
+version = "0.6.0"
+description = "Manage dependencies of tests"
+optional = false
+python-versions = ">=3.4"
+files = [
+    {file = "pytest-dependency-0.6.0.tar.gz", hash = "sha256:934b0e6a39d95995062c193f7eaeed8a8ffa06ff1bcef4b62b0dc74a708bacc1"},
+]
+
+[package.dependencies]
+pytest = ">=3.7.0"
+setuptools = "*"
+
+[[package]]
 name = "pytest-mypy-plugins"
 version = "3.1.2"
 description = "pytest plugin for writing tests for mypy plugins"
@@ -2250,4 +2264,4 @@ lint = ["pylint"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "db02beb08cf803912f087f9f78731157a1c8fe070920330f70e0ebeaac86c311"
+content-hash = "67ac5c4611b7045ce5fc13c7981ade0efa2cde913417c44feb1379ebf23de41f"

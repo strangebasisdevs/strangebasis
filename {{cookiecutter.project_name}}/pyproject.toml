@@ -6,6 +6,10 @@ authors = ["{{ cookiecutter.author_name }} <{{ cookiecutter.author_email }}>"]
 license = "AGPL-3.0"
 readme = "README.md"
 
+[virtualenvs]
+in-project = true
+path = ".venv"
+
 [tool.poetry.dependencies]
 python = "^3.12"
 
