@@ -93,4 +93,5 @@ style = [
     "https://raw.githubusercontent.com/strangebasisdevs/strangebasis/refs/heads/main/nitpick/strangebasis-pre-commit.toml",
     "https://raw.githubusercontent.com/strangebasisdevs/strangebasis/refs/heads/main/nitpick/strangebasis-readthedocs.toml",
     "https://raw.githubusercontent.com/strangebasisdevs/strangebasis/refs/heads/main/nitpick/strangebasis-nitpick.toml",
+    "https://raw.githubusercontent.com/strangebasisdevs/strangebasis/refs/heads/main/nitpick/strangebasis-github-workflow.toml",
 ]
