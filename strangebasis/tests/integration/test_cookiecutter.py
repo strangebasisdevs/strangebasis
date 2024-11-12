@@ -25,8 +25,8 @@ def generated_project() -> Generator[str, None, None]:
         Generator[str, None, None]: The path to the generated project directory.
     """
     with tempfile.TemporaryDirectory() as temp_dir:
-        output_dir = os.path.join(temp_dir, "strangebasis-derivative")
         try:
+            output_dir = os.path.join(temp_dir, "strangebasis_derivative")
             # Run cookiecutter on the current directory with no input and specify the output directory
             subprocess.run(["cookiecutter", ".", "--no-input", "--output-dir", temp_dir], check=True)
             yield output_dir

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "{{cookiecutter.project_name}}"
-version = "0.1.0"
+version = "0.0.1"
 description = "{{cookiecutter.description}}"
 authors = ["{{ cookiecutter.author_name }} <{{ cookiecutter.author_email }}>"]
 license = "AGPL-3.0"
@@ -12,8 +12,19 @@ path = ".venv"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+pytest-cov = "^6.0.0"
+pytest-dependency = "^0.6.0"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.extras]
+lint = [ "pylint",]
+
+[tool.poetry.dependencies.pylint]
+version = "*"
+optional = true
+
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.3.1"
 black = "^24.10.0"
 mypy = "^1.13.0"
 pre-commit = "^4.0.1"
@@ -22,11 +33,57 @@ isort = "^5.13.2"
 nitpick = "^0.35.0"
 cookiecutter = "^2.6.0"
 pytest = "^8.3.3"
-
+pytest-mypy-plugins = "^3.1.2"
+zap = "^2.1"
+coverage = "^7.6.4"
+flake8-black = "^0.2.0"
+flake8-quotes = "^3.4.0"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.0.8"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.isort]
+profile = "black"
+line_length = 88
+indent = "    "
+
+[tool.pylint]
+max-line-length = 88
+indent-string = "    "
+
+[tool.flake8]
+max-line-length = 88
+
+[tool.black]
+line-length = 120
+
 [tool.nitpick]
-style = "https://raw.githubusercontent.com/wemake-services/wemake-python-styleguide/master/styles/nitpick-style-wemake.toml"
+style = [
+    "py://nitpick/resources/any/codeclimate",
+    "py://nitpick/resources/any/commitizen",
+    "py://nitpick/resources/any/editorconfig",
+    "py://nitpick/resources/any/git-legal",
+    "py://nitpick/resources/any/pre-commit-hooks",
+    "py://nitpick/resources/javascript/package-json",
+    "py://nitpick/resources/markdown/markdownlint",
+    "py://nitpick/resources/python/absent",
+    "py://nitpick/resources/python/autoflake",
+    "py://nitpick/resources/python/bandit",
+    "py://nitpick/resources/python/black",
+    "py://nitpick/resources/python/flake8",
+    "py://nitpick/resources/python/github-workflow",
+    "py://nitpick/resources/python/isort",
+    "py://nitpick/resources/python/mypy",
+    "py://nitpick/resources/python/poetry",
+    "py://nitpick/resources/python/pre-commit-hooks",
+    "py://nitpick/resources/python/pylint",
+    "py://nitpick/resources/python/radon",
+    "py://nitpick/resources/python/readthedocs",
+    "py://nitpick/resources/python/sonar-python",
+    "py://nitpick/resources/python/312",
+    "py://nitpick/resources/shell/bashate",
+    "py://nitpick/resources/shell/shellcheck",
+    "https://raw.githubusercontent.com/strangebasisdevs/strangebasis/refs/heads/main/nitpick/strangebasis-prettier.toml",
+    "https://raw.githubusercontent.com/strangebasisdevs/strangebasis/refs/heads/main/nitpick/strangebasis-pre-commit.toml",
+]

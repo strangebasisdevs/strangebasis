@@ -1,4 +1,4 @@
 [run]
+source = .
 omit =
-    {{cookiecutter.project_name}}/.gitignore
-    {{cookiecutter.project_name}}/LICENSE
+    */strangebasis_derivative/*
