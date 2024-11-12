@@ -1,7 +1,11 @@
 name: Python
 on:
-  - push
-  - pull_request
+  pull_request:
+    branches:
+      - "*"
+  push:
+    branches:
+      - main
 jobs:
   build:
     strategy:

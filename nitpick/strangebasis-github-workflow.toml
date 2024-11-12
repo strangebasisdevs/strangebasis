@@ -4,7 +4,12 @@ url = "https://github.com/strangebasisdevs/strangebasis/blob/main/nitpick/strang
 
 [".github/workflows/python.yaml"]
 name = "Python"
-on = ["push", "pull_request"]
+
+[".github/workflows/python.yaml".on.pull_request]
+branches = ["*"]
+
+[".github/workflows/python.yaml".on.push]
+branches = ["main"]
 
 [".github/workflows/python.yaml".jobs.build.strategy]
 fail-fast = false
