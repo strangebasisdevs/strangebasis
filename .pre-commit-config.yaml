@@ -123,18 +123,3 @@ repos:
           - --ini
           - setup.cfg
         exclude: tests/
-
-  # - repo: https://github.com/psf/black-pre-commit-mirror
-  #   hooks:
-  #     - id: black
-  #       args:
-  #         - --safe
-  #         - --quiet
-  # - repo: local
-  #   hooks:
-  #     - id: pylint
-  #       name: pylint
-  #       language: system
-  #       exclude: tests/
-  #       types:
-  #         - python
