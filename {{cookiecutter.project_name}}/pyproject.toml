@@ -79,7 +79,6 @@ style = [
     "py://nitpick/resources/python/bandit",
     "py://nitpick/resources/python/black",
     "py://nitpick/resources/python/flake8",
-    "py://nitpick/resources/python/github-workflow",
     "py://nitpick/resources/python/isort",
     "py://nitpick/resources/python/mypy",
     "py://nitpick/resources/python/poetry",
