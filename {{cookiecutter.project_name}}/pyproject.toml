@@ -20,6 +20,14 @@ lint = [ "pylint",]
 version = "*"
 optional = true
 
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.0.1"
+tag_format = "v$version"
+changelog_file = "CHANGELOG.md"
+changelog_incremental = true
+update_changelog_on_bump = false
+
 [tool.poetry.group.dev.dependencies]
 pylint = "^3.3.1"
 black = "^24.10.0"
@@ -84,4 +92,6 @@ style = [
     "py://nitpick/resources/shell/shellcheck",
     "https://raw.githubusercontent.com/strangebasisdevs/strangebasis/refs/heads/main/nitpick/strangebasis-prettier.toml",
     "https://raw.githubusercontent.com/strangebasisdevs/strangebasis/refs/heads/main/nitpick/strangebasis-pre-commit.toml",
+    "https://raw.githubusercontent.com/strangebasisdevs/strangebasis/refs/heads/main/nitpick/strangebasis-readthedocs.toml",
+    "https://raw.githubusercontent.com/strangebasisdevs/strangebasis/refs/heads/main/nitpick/strangebasis-nitpick.toml",
 ]
