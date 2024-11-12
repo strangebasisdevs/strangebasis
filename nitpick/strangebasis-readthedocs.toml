@@ -1,0 +1,22 @@
+[nitpick.meta]
+name = "strangebasis-readthedocs"
+url = "https://github.com/strangebasisdevs/strangebasis/blob/main/nitpick/strangebasis-readthedocs.toml"
+
+# https://docs.readthedocs.io/en/stable/config-file/v2.html
+[".readthedocs.yaml"]
+version = 2
+formats = "all"
+
+[".readthedocs.yaml".build]
+os = "ubuntu-22.04"
+
+[".readthedocs.yaml".build.tools]
+python = "3.12"
+
+[".readthedocs.yaml".sphinx]
+configuration = "docs/conf.py"
+
+[[".readthedocs.yaml".python.install]]
+method = "poetry"
+path = "."
+extra_requirements = ["doc"]

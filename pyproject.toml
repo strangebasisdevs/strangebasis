@@ -12,8 +12,6 @@ path = ".venv"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-pytest-cov = "^6.0.0"
-pytest-dependency = "^0.6.0"
 
 [tool.poetry.extras]
 lint = [ "pylint",]
@@ -21,7 +19,6 @@ lint = [ "pylint",]
 [tool.poetry.dependencies.pylint]
 version = "*"
 optional = true
-
 
 [tool.poetry.group.dev.dependencies]
 pylint = "^3.3.1"
@@ -38,6 +35,8 @@ zap = "^2.1"
 coverage = "^7.6.4"
 flake8-black = "^0.2.0"
 flake8-quotes = "^3.4.0"
+pytest-cov = "^6.0.0"
+pytest-dependency = "^0.6.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.8"]
@@ -79,11 +78,12 @@ style = [
     "py://nitpick/resources/python/pre-commit-hooks",
     "py://nitpick/resources/python/pylint",
     "py://nitpick/resources/python/radon",
-    "py://nitpick/resources/python/readthedocs",
     "py://nitpick/resources/python/sonar-python",
     "py://nitpick/resources/python/312",
     "py://nitpick/resources/shell/bashate",
     "py://nitpick/resources/shell/shellcheck",
     "./nitpick/strangebasis-prettier.toml",
     "./nitpick/strangebasis-pre-commit.toml",
+    "./nitpick/strangebasis-readthedocs.toml",
+    "./nitpick/strangebasis-nitpick.toml",
 ]
