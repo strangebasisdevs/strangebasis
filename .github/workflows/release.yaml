@@ -34,12 +34,9 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: List Git tags
-        run: git tag
-
       - name: Bump version and generate changelog
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           poetry run cz bump --yes --changelog
-          git push --follow-tags
+          git push origin main --follow-tags
