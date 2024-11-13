@@ -37,13 +37,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          poetry run cz bump --yes
+          poetry run cz bump --yes --changelog
           git push --follow-tags
-
-      - name: Push updated version and changelog
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git add .
-          git commit -m "ci: bump version and update changelog [skip ci]"
-          git push
