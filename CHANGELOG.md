@@ -1,3 +1,9 @@
+## v0.2.4 (2024-11-13)
+
+### Fix
+
+- **release.yaml**: try excplicity pushing tag [skip_ci]
+
 ## v0.2.3 (2024-11-13)
 
 ### Fix
