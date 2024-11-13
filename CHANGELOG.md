@@ -1,4 +1,12 @@
-## Unreleased
+## v0.2.1 (2024-11-13)
+
+### Fix
+
+- debug by pushing local tags to remote
+- **release.yaml**: configure git to fetch tags
+- **releast.yaml**: add changelog generation and hopefully tagging
+
+## v0.2.0 (2024-11-12)
 
 ### Feat
 
@@ -10,8 +18,16 @@
 - **hooks**: implement pylint flake8 and bandit
 - **cookiecutting**: 18th times the charm
 
+### Fix
+
+- **release.yaml**: revert key configuration and add permission config
+- **release.yaml**: try another way of configuring github_token
+- **release.yaml**: add git configuration step for bump
+
 ### Refactor
 
+- update pre-commit and nitpick source for cookiecutter test
+- **.pre-commit-config.yaml**: remove extraneous comment
 - **nitpick**: nitpick for nitpick
 - **cookiecutter**: restructure project and add pytests
 - record work. change approach
