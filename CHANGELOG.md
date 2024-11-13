@@ -1,3 +1,9 @@
+## v0.2.3 (2024-11-13)
+
+### Fix
+
+- **release.yaml**: add debug output [skip_ci]
+
 ## v0.2.2 (2024-11-13)
 
 ### Fix
