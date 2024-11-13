@@ -43,8 +43,8 @@ This project follows the **Git Flow** branching strategy:
 
 ## Pre-commit Hooks
 
-This project uses **pre-commit** to ensure code quality and consistency. Before making commits, configure your environment to use the pre-commit hooks defined in `.pre-commit-config.yaml`.
-Refer to getting_started.md for details on first time setup and pre_commit.md for details on each check.
+This project uses **pre-commit** to ensure code quality and consistency. Before making commits, configure your environment to use the pre-commit hooks defined in [`.pre-commit-config.yaml`](../.pre-commit-config.yaml).
+Refer to [getting_started.md](getting_started.md) for details on first time setup and [pre-commit.md](pre-commit.md) for details on each check.
 
 ## Testing and Coverage
 
