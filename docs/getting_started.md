@@ -50,7 +50,7 @@ Validate the above prereqs with the following steps:
 
 ## Using strangebasis
 
-### Quick Start
+### Cookiecutter Quick Start
 
 1. Install cookiecutter: `pip install cookiecutter`
 2. Generate project: `cookiecutter gh:strangebasisdevs/strangebasis`
@@ -92,7 +92,7 @@ To generate a project based on different versions of this repository, follow the
 
 ## Contributing to strangebasis
 
-### Quick Start for Developers
+### Development Quick Start
 
 1. Clone repo: `git clone https://github.com/strangebasisdevs/strangebasis.git`
 2. Setup dev environment: `poetry install`
@@ -100,56 +100,7 @@ To generate a project based on different versions of this repository, follow the
 4. Install pre-commit `pre-commit install`
 5. Run tests: `pytest`
 
-### Development Environment Setup
-
-These steps will guide you through the initial setup of the strangebasis project for development and/or contribution. [These are the same steps outlined above,](#quick-start-for-developers) but documented in greater detail.
-
-1. Clone the repository and navigate into it:
-
-```sh
-git clone https://github.com/strangebasisdevs/strangebasis.git
-cd strangebasis
-```
-
-2. Install Poetry, if not already installed:
-
-```sh
-pip install poetry
-```
-
-3. Install dependencies and development tools:
-
-```sh
-poetry install
-```
-
-4. Activate the Poetry Shell:
-   To ensure all following commands use the virtual environment managed by Poetry, activate the Poetry shell:
-
-```sh
-poetry shell
-```
-
-This command spawns a new shell within the virtual environment, providing access to all necessary development tools and dependencies.
-
-5. Install pre-commit hooks:
-   Using pre-commit hooks helps us maintain a high standard of code quality and consistency across the project. These hooks automatically run checks and formatting tools before each commit, catching potential issues early in the development process. This ensures that all code committed to the repository adheres to our coding standards and reduces the likelihood of introducing bugs or style inconsistencies. By integrating pre-commit hooks, we streamline the code review process and foster a more efficient and collaborative development environment.
-
-```sh
-pre-commit install
-```
-
-6. [Optional] Run pre-commit hooks against all files to check for any existing issues:
-
-```sh
-pre-commit run --all-files
-```
-
-7. Run tests locally to verify everything is set up correctly:
-
-```sh
-pytest
-```
+For detailed steps on setting up your development environment, please refer to the documenation on [Development Environment Setup](contributing.md#development-environment-setup).
 
 ### IDE Configuration
 
@@ -180,94 +131,6 @@ By following these steps, Visual Studio Code will recognize and use the Python v
 
 ## Advanced Topics
 
-### Contributing Guidelines
-
-We welcome contributions to the strangebasis project. Follow these steps to contribute:
-
-1. **Fork the Repository**:
-
-   - Go to the [strangebasis repository](https://github.com/strangebasisdevs/strangebasis) on GitHub.
-   - Click the "Fork" button to create your own copy of the repository.
-
-2. **Clone Your Fork**:
-
-   - Clone your forked repository to your local machine:
-     ```sh
-     git clone https://github.com/<your-username>/strangebasis.git
-     cd strangebasis
-     ```
-
-3. **Set Upstream Remote**:
-
-   - Add the original repository as an upstream remote to keep your fork up-to-date:
-     ```sh
-     git remote add upstream https://github.com/strangebasisdevs/strangebasis.git
-     ```
-
-4. **Create a New Branch**:
-
-   - Create a new branch for your feature or bugfix:
-     ```sh
-     git checkout -b <branch-name>
-     ```
-
-5. **Install Dependencies**:
-
-   - Install the project dependencies using Poetry:
-     ```sh
-     poetry install
-     ```
-
-6. **Activate the Virtual Environment**:
-
-   - Activate the Poetry shell to use the virtual environment:
-     ```sh
-     poetry shell
-     ```
-
-7. **Run Pre-commit Hooks**:
-
-   - Install and run pre-commit hooks to ensure code quality:
-     ```sh
-     pre-commit install
-     pre-commit run --all-files
-     ```
-
-8. **Write Tests**:
-
-   - Ensure your changes are covered by tests. Add new tests if necessary.
-
-9. **Run Tests**:
-
-   - Run the test suite to verify that all tests pass:
-     ```sh
-     pytest
-     ```
-
-10. **Commit Your Changes**:
-
-    - Commit your changes with a meaningful commit message:
-      ```sh
-      git add .
-      git commit -m "Description of your changes"
-      ```
-
-11. **Push to Your Fork**:
-
-    - Push your branch to your forked repository:
-      ```sh
-      git push origin <branch-name>
-      ```
-
-12. **Create a Pull Request**:
-
-    - Go to the original repository on GitHub and create a pull request from your branch.
-
-13. **Respond to Feedback**:
-    - Be responsive to any feedback or requests for changes from the project maintainers.
-
-By following this checklist, you can ensure that your contributions are well-prepared and align with the project's standards. Thank you for contributing to strangebasis!
-
 ### Best Practices
 
 Following these best practices will help ensure a smooth and efficient development process:
@@ -293,7 +156,7 @@ Following these best practices will help ensure a smooth and efficient developme
 #### Collaboration
 
 - **Code Reviews**: Participate in code reviews to share knowledge and improve code quality.
-- **Follow Contribution Guidelines**: Adhere to the project's contribution guidelines to ensure a smooth review and merge process.
+- **Follow Contribution Guidelines**: Adhere to [the project's contribution guidelines](contributing.md) to ensure a smooth review and merge process.
 - **Communicate Effectively**: Use clear and concise communication in pull requests, issues, and commit messages.
 
 #### Continuous Integration
