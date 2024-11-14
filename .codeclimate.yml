@@ -2,13 +2,18 @@ plugins:
   editorconfig:
     enabled: true
   markdownlint:
-    enabled: false
+    enabled: true
+    config:
+      default: true
+      MD007: false # Disable MD007 (Unordered list indentation)
+      MD013: false # Disable MD013 (Line length)
+      MD029: false # Disable MD029 (Ordered list item prefix)
   pylint:
     enabled: false
   sonar-python:
     enabled: true
   fixme:
-    enabled: false
+    enabled: true
   git-legal:
     enabled: true
   shellcheck:
