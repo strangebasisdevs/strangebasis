@@ -52,15 +52,14 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.isort]
 profile = "black"
-line_length = 88
+line_length = 120
 indent = "    "
-
-[tool.pylint]
-max-line-length = 88
-indent-string = "    "
-
-[tool.flake8]
-max-line-length = 88
+skip = [".tox", "build"]
+known_first_party = ["tests"]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+combine_as_imports = true
 
 [tool.black]
 line-length = 120
@@ -79,8 +78,6 @@ style = [
     "py://nitpick/resources/python/bandit",
     "py://nitpick/resources/python/black",
     "py://nitpick/resources/python/flake8",
-    "py://nitpick/resources/python/isort",
-    "py://nitpick/resources/python/mypy",
     "py://nitpick/resources/python/poetry",
     "py://nitpick/resources/python/pre-commit-hooks",
     "py://nitpick/resources/python/radon",
@@ -93,34 +90,32 @@ style = [
     "./nitpick/strangebasis-readthedocs.toml",
     "./nitpick/strangebasis-nitpick.toml",
     "./nitpick/strangebasis-github-workflow.toml",
-    # TODO: add nitpick for pylint and maybe pytest options outlined below
+    # TODO: add pylint, isort, mypy and maybe pytest options
     # TODO: consider making one nitpick file for strangebasis repo config management at large
 ]
 
 [tool.pytest.ini_options]
 addopts = "--ignore={{cookiecutter.project_name}} --cov=."
 
-[tool.pylint.basic]
-bad-functions = "map,filter"
-good-names = "i,j,k,e,ex,Run,_,id,rv,c"
+[tool.coverage.run]
+source = "."
+omit = [
+    "*/strangebasis_derivative/*",
+    "{{cookiecutter.project_name}}/.editorconfig",
+    "{{cookiecutter.project_name}}/.gitignore",
+    "{{cookiecutter.project_name}}/.pylintrc",
+    "{{cookiecutter.project_name}}/LICENSE"
+]
 
-[tool.pylint.format]
-max-line-length = 120
-max-module-lines = 1000
-indent-after-paren = 4
+[tool.mypy]
+strict = true
+warn_unreachable = true
+ignore_missing_imports = true
+follow_imports = "normal"
+strict_optional = true
+warn_no_return = true
+warn_redundant_casts = true
+warn_unused_ignores = false
 
-[tool.pylint.master]
-jobs = 1
-extension-pkg-whitelist = "pydantic"
-
-[tool.pylint.reports]
-output-format = "colorized"
-
-[tool.pylint.similarities]
-min-similarity-lines = 4
-ignore-comments = true
-ignore-docstrings = true
-ignore-imports = false
-
-[tool.pylint.variables]
-dummy-variables-rgx = "_$|dummy"
+[tool.bandit]
+severity = "Medium"
