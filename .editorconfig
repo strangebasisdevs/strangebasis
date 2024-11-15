@@ -22,3 +22,6 @@ indent_style = space
 indent_size = 1
 insert_final_newline = True
 trim_trailing_whitespace = True
+
+[LICENSE]
+indent_size = unset

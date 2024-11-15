@@ -120,3 +120,7 @@ repos:
           - --ini
           - setup.cfg
         exclude: tests/
+  - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
+    rev: 3.0.3
+    hooks:
+      - id: editorconfig-checker
