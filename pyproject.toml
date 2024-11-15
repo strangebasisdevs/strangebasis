@@ -83,7 +83,6 @@ style = [
     "py://nitpick/resources/python/mypy",
     "py://nitpick/resources/python/poetry",
     "py://nitpick/resources/python/pre-commit-hooks",
-    "py://nitpick/resources/python/pylint",
     "py://nitpick/resources/python/radon",
     "py://nitpick/resources/python/sonar-python",
     "py://nitpick/resources/python/312",
@@ -94,4 +93,34 @@ style = [
     "./nitpick/strangebasis-readthedocs.toml",
     "./nitpick/strangebasis-nitpick.toml",
     "./nitpick/strangebasis-github-workflow.toml",
+    # TODO: add nitpick for pylint and maybe pytest options outlined below
+    # TODO: consider making one nitpick file for strangebasis repo config management at large
 ]
+
+[tool.pytest.ini_options]
+addopts = "--ignore={{cookiecutter.project_name}} --cov=."
+
+[tool.pylint.basic]
+bad-functions = "map,filter"
+good-names = "i,j,k,e,ex,Run,_,id,rv,c"
+
+[tool.pylint.format]
+max-line-length = 120
+max-module-lines = 1000
+indent-after-paren = 4
+
+[tool.pylint.master]
+jobs = 1
+extension-pkg-whitelist = "pydantic"
+
+[tool.pylint.reports]
+output-format = "colorized"
+
+[tool.pylint.similarities]
+min-similarity-lines = 4
+ignore-comments = true
+ignore-docstrings = true
+ignore-imports = false
+
+[tool.pylint.variables]
+dummy-variables-rgx = "_$|dummy"
