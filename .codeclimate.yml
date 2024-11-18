@@ -2,7 +2,7 @@ plugins:
   editorconfig:
     enabled: true
   markdownlint:
-    enabled: true
+    enabled: false
     config:
       default: true
       MD007: false # Disable MD007 (Unordered list indentation)
