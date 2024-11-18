@@ -1,3 +1,16 @@
+## v0.2.6 (2024-11-18)
+
+### Fix
+
+- implement editorconfig pre-commit and update config
+- update codeclimate config
+
+### Refactor
+
+- **config**: consolidate more configuration
+- **config**: consolidate some configs into pyproject.toml
+- **housekeeping**: delete firsttimesetup.note and fix newline chars in repo
+
 ## v0.2.5 (2024-11-14)
 
 ### Fix

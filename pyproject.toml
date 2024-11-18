@@ -22,7 +22,7 @@ optional = true
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.2.5"
+version = "0.2.6"
 tag_format = "v$version"
 changelog_file = "CHANGELOG.md"
 changelog_incremental = true
