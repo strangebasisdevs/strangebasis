@@ -1,3 +1,9 @@
+## v0.2.7 (2024-11-18)
+
+### Fix
+
+- **.codeclimate.yml**: disable markdownlint
+
 ## v0.2.6 (2024-11-18)
 
 ### Fix
