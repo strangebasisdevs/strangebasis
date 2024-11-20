@@ -3,7 +3,7 @@ name = "core"
 url = "https://github.com/strangebasisdevs/strangebasis/blob/main/nitpick/core.toml"
 
 
-# The following section is the GitHub Actions workflow for Python CI.
+# strangebasisdevs core GitHub Actions
 
 [".github/workflows/ci.yaml"]
 name = "Python CI"
@@ -61,6 +61,23 @@ if = "matrix.os == 'ubuntu-latest'"
 env.CC_TEST_REPORTER_ID = "${{ secrets.CC_TEST_REPORTER_ID }}"
 
 
-# The following section is the nitpick configuration for the project.
+# strangebasisdevs core CodeClimate config
 
-["pyproject.toml".tool.nitpick]
+# https://docs.codeclimate.com/docs/maintainability#section-checks
+# https://docs.codeclimate.com/docs/advanced-configuration#default-checks
+[".codeclimate.yml"]
+version = "2"
+
+[".codeclimate.yml".checks.file-lines.config]
+# Pylint's default is also 1000:
+# https://pylint.readthedocs.io/en/latest/user_guide/configuration/all-options.html#max-module-lines
+threshold = 1000
+
+[".codeclimate.yml".checks.method-complexity.config]
+threshold = 10 # Same as [flake8]max-complexity
+
+[".codeclimate.yml".plugins.fixme] # https://docs.codeclimate.com/docs/fixme
+# https://github.com/codeclimate/codeclimate-fixme
+enabled = true
+
+# strangebasisdevs core
