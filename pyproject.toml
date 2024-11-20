@@ -89,7 +89,7 @@ style = [
     "./nitpick/strangebasis-pre-commit.toml",
     "./nitpick/strangebasis-readthedocs.toml",
     "./nitpick/strangebasis-nitpick.toml",
-    "./nitpick/strangebasis-github-workflow.toml",
+    "./nitpick/core.toml",
     # TODO: add pylint, isort, mypy and maybe pytest options
     # TODO: consider making one nitpick file for strangebasis repo config management at large
 ]
