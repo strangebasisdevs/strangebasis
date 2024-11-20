@@ -80,4 +80,20 @@ threshold = 10 # Same as [flake8]max-complexity
 # https://github.com/codeclimate/codeclimate-fixme
 enabled = true
 
+# strangebasisdevs core Commitizen config
+
+[[".pre-commit-config.yaml".repos]]
+repo = "https://github.com/commitizen-tools/commitizen"
+
+[[".pre-commit-config.yaml".repos.hooks]]
+id = "commitizen"
+stages = ["commit-msg"]
+
+["pyproject.toml".tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "v$version"
+changelog_file = "CHANGELOG.md"
+changelog_incremental = true
+update_changelog_on_bump = false
+
 # strangebasisdevs core

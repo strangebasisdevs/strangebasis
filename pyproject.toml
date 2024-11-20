@@ -66,7 +66,6 @@ line-length = 120
 
 [tool.nitpick]
 style = [
-    "py://nitpick/resources/any/commitizen",
     "py://nitpick/resources/any/editorconfig",
     "py://nitpick/resources/any/git-legal",
     "py://nitpick/resources/any/pre-commit-hooks",
