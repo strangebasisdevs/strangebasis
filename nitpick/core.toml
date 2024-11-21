@@ -132,4 +132,9 @@ indent_size = "unset"
 [".codeclimate.yml".plugins.editorconfig]  # https://docs.codeclimate.com/docs/editorconfig
 enabled = true
 
+# strangebasisdevs core Git.legal config
+
+[".codeclimate.yml".plugins.git-legal]  # https://docs.codeclimate.com/docs/git-legal
+enabled = true
+
 # strangebasisdevs core
