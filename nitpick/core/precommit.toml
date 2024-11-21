@@ -1,0 +1,22 @@
+# strangebasisdevs core precommit config
+[nitpick.meta]
+name = "precommit"
+url = "https://github.com/strangebasisdevs/strangebasis/blob/main/nitpick/core/precommit.toml"
+
+[[".pre-commit-config.yaml".repos]]
+repo = "https://github.com/pre-commit/pre-commit-hooks"
+hooks = [
+    {id = "trailing-whitespace"},
+    {id = "end-of-file-fixer"},
+    {id = "check-yaml"},
+    {id = "check-added-large-files"},
+    {id = "check-case-conflict"},
+    {id = "check-json"},
+    {id = "check-merge-conflict"},
+    {id = "check-toml"},
+    {id = "debug-statements"}
+]
+
+# python-check-mock-methods: Checks for mock method usage.
+# rst-backticks: Ensures correct usage of backticks in reStructuredText files.
+# bashate: Lints bash scripts.
