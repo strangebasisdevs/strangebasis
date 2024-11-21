@@ -78,7 +78,6 @@ style = [
     "py://nitpick/resources/python/radon",
     "py://nitpick/resources/python/sonar-python",
     "py://nitpick/resources/python/312",
-    "py://nitpick/resources/shell/bashate",
     "py://nitpick/resources/shell/shellcheck",
     "./nitpick/strangebasis-prettier.toml",
     "./nitpick/strangebasis-pre-commit.toml",
