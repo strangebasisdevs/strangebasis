@@ -1,0 +1,8 @@
+[nitpick.meta]
+name = "style"
+url = "https://github.com/strangebasisdevs/strangebasis/blob/main/nitpick/style.toml"
+
+[nitpick.styles]
+include = [
+    "style/isort.toml"
+]

@@ -1,0 +1,10 @@
+# strangebasisdevs core isort config
+[nitpick.meta]
+name = "isort"
+url = "https://github.com/strangebasisdevs/strangebasis/blob/main/nitpick/style/isort.toml"
+
+[[".pre-commit-config.yaml".repos]]
+repo = "https://github.com/pycqa/isort"
+
+[[".pre-commit-config.yaml".repos.hooks]]
+id = "isort"
