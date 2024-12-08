@@ -70,7 +70,6 @@ style = [
     "py://nitpick/resources/markdown/markdownlint",
     "py://nitpick/resources/python/absent",
     "py://nitpick/resources/python/bandit",
-    "py://nitpick/resources/python/flake8",
     "py://nitpick/resources/python/poetry",
     "py://nitpick/resources/python/pre-commit-hooks",
     "py://nitpick/resources/python/radon",

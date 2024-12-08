@@ -4,6 +4,7 @@ url = "https://github.com/strangebasisdevs/strangebasis/blob/main/nitpick/style.
 
 [nitpick.styles]
 include = [
+    "style/flake8.toml",
     "style/isort.toml",
     "style/prettier.toml",
     "style/pylint.toml",
