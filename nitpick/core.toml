@@ -10,5 +10,6 @@ include = [
     "core/editorconfig.toml",
     "core/gitlegal.toml",
     "core/precommit.toml",
-    "core/pygrep.toml"
+    "core/pygrep.toml",
+    "py://nitpick/resources/shell/shellcheck",
 ]
