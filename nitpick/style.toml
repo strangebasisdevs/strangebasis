@@ -7,5 +7,6 @@ include = [
     "style/isort.toml",
     "style/prettier.toml",
     "style/pylint.toml",
+    "py://nitpick/resources/python/autoflake",
     "py://nitpick/resources/python/black",
 ]
