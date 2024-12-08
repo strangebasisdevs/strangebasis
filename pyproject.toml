@@ -85,6 +85,7 @@ style = [
 
 [tool.pytest.ini_options]
 addopts = "--ignore={{cookiecutter.project_name}} --cov=."
+pythonpath = ["."]
 
 [tool.coverage.run]
 source = "."

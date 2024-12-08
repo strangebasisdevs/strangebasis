@@ -6,6 +6,7 @@ url = "https://github.com/strangebasisdevs/strangebasis/blob/main/nitpick/style.
 include = [
     "style/flake8.toml",
     "style/isort.toml",
+    "style/mypy.toml",
     "style/prettier.toml",
     "style/pylint.toml",
     "py://nitpick/resources/python/autoflake",
