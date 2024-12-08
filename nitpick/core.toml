@@ -11,5 +11,6 @@ include = [
     "core/gitlegal.toml",
     "core/precommit.toml",
     "core/pygrep.toml",
+    "py://nitpick/resources/python/bandit",
     "py://nitpick/resources/shell/shellcheck",
 ]
