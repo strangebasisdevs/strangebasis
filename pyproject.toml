@@ -75,7 +75,6 @@ style = [
     "py://nitpick/resources/python/radon",
     "py://nitpick/resources/python/sonar-python",
     "py://nitpick/resources/python/312",
-    "./nitpick/strangebasis-pre-commit.toml",
     "./nitpick/core.toml",
     "./nitpick/style.toml",
     # TODO: add pylint, isort, mypy and maybe pytest options

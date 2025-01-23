@@ -17,6 +17,10 @@ hooks = [
     {id = "debug-statements"}
 ]
 
+[".pre-commit-config.yaml".default_language_version]
+# https://pre-commit.com/#top_level-default_language_version
+python = "python3.12"
+
 # python-check-mock-methods: Checks for mock method usage.
 # rst-backticks: Ensures correct usage of backticks in reStructuredText files.
 # bashate: Lints bash scripts.
