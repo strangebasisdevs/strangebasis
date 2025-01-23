@@ -1,3 +1,35 @@
+## v0.3.0 (2025-01-23)
+
+### Feat
+
+- **nitpick/style.toml**: modularize mypy config management
+- **nitpick/style.toml**: modularize flake8 config management
+- **nitpick/core.toml**: add shellcheck to the core config management
+- **nitpick/style.toml**: modularize pylint config management
+- **nitpick/style.toml**: modularize prettier config management
+- **nitpick/style.toml**: enforce pyproject isort settings with nitpick
+- **nitpick/style.toml**: modularize isort config management
+- **nitpick**: truly modularize nitpick core config
+- **nitpick/core.toml**: add editorconfig to core.toml
+- **nitpick/core.toml**: add nitpick config to core.toml
+
+### Fix
+
+- **vulnerability**: update jinja2 sandbox breakout vuln
+- **pyproject.toml**: remove nitpick builtin style for bashate
+
+### Refactor
+
+- **pyproject.toml**: remove comments and prepare for cookiecut inheritance
+- refactor nitpick python version check
+- **readthedocs**: remove readthedocs integration for now
+- **nitpick/core.toml**: modularize bandit config management and remove duplicate bandit hook
+- **nitpick/style.toml**: modularize autflake config management
+- **nitpick/style.toml**: cleanup pyproject.toml and use builtin for blackendocs
+- **nitpick/core.toml**: migrate pypackage gitlegal toml into core.toml
+- migrate CodeClimate nitpick into core.toml
+- **nitpick/core.toml**: draft core.toml for config as code approach
+
 ## v0.2.7 (2024-11-18)
 
 ### Fix
