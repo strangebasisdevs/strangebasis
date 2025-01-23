@@ -76,9 +76,7 @@ style = [
     "py://nitpick/resources/python/sonar-python",
     "py://nitpick/resources/python/312",
     "./nitpick/core.toml",
-    "./nitpick/style.toml",
-    # TODO: add pylint, isort, mypy and maybe pytest options
-    # TODO: consider making one nitpick file for strangebasis repo config management at large
+    "./nitpick/style.toml"
 ]
 
 [tool.pytest.ini_options]
