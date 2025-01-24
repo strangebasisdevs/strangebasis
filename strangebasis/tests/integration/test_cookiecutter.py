@@ -72,6 +72,23 @@ def test_init_poetry(generated_project: Path) -> None:
 
 
 @pytest.mark.dependency(depends=["test_init_poetry"])
+def test_replace_lock_line_endings(generated_project: Path) -> None:
+    """Replace line endings in poetry.lock to LF."""
+    lock_path = os.path.join(generated_project, "poetry.lock")
+    try:
+        # Read in binary mode to bypass encoding issues
+        with open(lock_path, "rb") as f:
+            content = f.read()
+        # Replace CRLF (\r\n) with LF (\n) as bytes
+        content = content.replace(b"\r\n", b"\n")
+        # Write back in binary mode
+        with open(lock_path, "wb") as f:
+            f.write(content)
+    except FileNotFoundError as e:
+        pytest.fail(f"Poetry lock file not found: {e}")
+
+
+@pytest.mark.dependency(depends=["test_init_poetry", "test_replace_lock_line_endings"])
 def test_install_pre_commit(generated_project: Path) -> None:
     """Install pre-commit in the generated project."""
     try:
@@ -80,7 +97,7 @@ def test_install_pre_commit(generated_project: Path) -> None:
         pytest.fail(f"Pre-commit install command failed: {e}")
 
 
-@pytest.mark.dependency(depends=["test_init_git_repo"])
+@pytest.mark.dependency(depends=["test_init_git_repo", "test_replace_lock_line_endings"])
 def test_git_add_all(generated_project: Path) -> None:
     """Test adding all content to be tracked by git in the generated project."""
     try:

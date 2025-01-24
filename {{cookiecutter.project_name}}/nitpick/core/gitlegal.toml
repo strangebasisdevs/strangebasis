@@ -1,0 +1,7 @@
+# strangebasisdevs core Git.legal config
+[nitpick.meta]
+name = "gitlegal"
+url = "https://github.com/strangebasisdevs/strangebasis/blob/main/nitpick/core.toml"
+
+[".codeclimate.yml".plugins.git-legal]  # https://docs.codeclimate.com/docs/git-legal
+enabled = true

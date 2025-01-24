@@ -1,0 +1,22 @@
+# strangebasisdevs core isort config
+[nitpick.meta]
+name = "isort"
+url = "https://github.com/strangebasisdevs/strangebasis/blob/main/nitpick/style/isort.toml"
+
+[[".pre-commit-config.yaml".repos]]
+repo = "https://github.com/pycqa/isort"
+
+[[".pre-commit-config.yaml".repos.hooks]]
+id = "isort"
+
+
+["pyproject.toml".tool.isort]
+profile = "black"
+line_length = 120
+indent = "    "
+skip = [".tox", "build"]
+known_first_party = ["tests"]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+combine_as_imports = true

@@ -1,0 +1,13 @@
+# strangebasisdevs core pygrep config
+[nitpick.meta]
+name = "bashate"
+url = "https://github.com/strangebasisdevs/strangebasis/blob/main/nitpick/core/bashate.toml"
+
+[[".pre-commit-config.yaml".repos]]
+repo = "https://github.com/openstack/bashate"
+
+[[".pre-commit-config.yaml".repos.hooks]]
+id = "bashate"
+
+# https://docs.openstack.org/bashate/latest/man/bashate.html#options
+args = ["-i", "E006"]

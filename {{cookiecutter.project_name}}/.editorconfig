@@ -25,3 +25,6 @@ trim_trailing_whitespace = True
 
 [LICENSE]
 indent_size = unset
+
+[poetry.lock]
+end_of_line = unset
