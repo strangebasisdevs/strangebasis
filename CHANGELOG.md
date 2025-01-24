@@ -1,3 +1,9 @@
+## v0.4.0 (2025-01-24)
+
+### Feat
+
+- **cookiecutter**: trickle down tehcnical benefits
+
 ## v0.3.0 (2025-01-23)
 
 ### Feat
