@@ -1,0 +1,15 @@
+# strangebasisdevs core pylint config
+[nitpick.meta]
+name = "pylint"
+url = "https://github.com/strangebasisdevs/strangebasis/blob/main/nitpick/style/pylint.toml"
+
+[[".pre-commit-config.yaml".repos]]
+repo = "local"
+
+[[".pre-commit-config.yaml".repos.hooks]]
+id = "pylint"
+name = "pylint"
+entry = "poetry run pylint --disable=C0103"
+language = "system"
+exclude = "tests/"
+types = ["python",]

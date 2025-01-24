@@ -1,0 +1,18 @@
+# strangebasisdevs core Commitizen config
+[nitpick.meta]
+name = "commitizen"
+url = "https://github.com/strangebasisdevs/strangebasis/blob/main/nitpick/core/commitizen.toml"
+
+[[".pre-commit-config.yaml".repos]]
+repo = "https://github.com/commitizen-tools/commitizen"
+
+[[".pre-commit-config.yaml".repos.hooks]]
+id = "commitizen"
+stages = ["commit-msg"]
+
+["pyproject.toml".tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "v$version"
+changelog_file = "CHANGELOG.md"
+changelog_incremental = true
+update_changelog_on_bump = false

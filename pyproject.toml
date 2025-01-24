@@ -85,7 +85,7 @@ addopts = "--ignore={{cookiecutter.project_name}} --cov=."
 pythonpath = ["."]
 
 [tool.coverage.run]
-source = "."
+source = ["."]
 omit = [
     "*/strangebasis_derivative/*",
     "{{cookiecutter.project_name}}/.editorconfig",

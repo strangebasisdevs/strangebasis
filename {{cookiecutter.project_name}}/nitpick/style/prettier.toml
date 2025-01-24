@@ -1,0 +1,10 @@
+# strangebasisdevs core prettier config
+[nitpick.meta]
+name = "prettier"
+url = "https://github.com/strangebasisdevs/strangebasis/blob/main/nitpick/style/prettier.toml"
+
+[[".pre-commit-config.yaml".repos]]
+repo = "https://github.com/pre-commit/mirrors-prettier"
+
+[[".pre-commit-config.yaml".repos.hooks]]
+id = "prettier"
