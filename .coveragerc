@@ -1,8 +1,0 @@
-[run]
-source = .
-omit =
-    */strangebasis_derivative/*
-    {{cookiecutter.project_name}}/.editorconfig
-    {{cookiecutter.project_name}}/.gitignore
-    {{cookiecutter.project_name}}/.pylintrc
-    {{cookiecutter.project_name}}/LICENSE

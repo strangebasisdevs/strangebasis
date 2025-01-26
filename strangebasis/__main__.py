@@ -1,5 +1,5 @@
 # This "Strange Basis" is my digital toolbox. Use at your own risk.
-#     Copyright (C) 2024  Skylar DonLevy
+#     Copyright (C) 2025  strangebasis
 """
 The strangebasis module.
 
@@ -19,8 +19,11 @@ def main() -> None:
     provided, it calls the corresponding function with the parsed
     arguments.
 
+    Args:
+        args: The command-line arguments passed to the function.
+
     Returns:
-        None
+        0 if the command was successful, 1 if help is deplayed, and 2 if the command failed.
     """
     parser = argparse.ArgumentParser(description="Strange Basis CLI", prog="strangebasis")
     subparsers = parser.add_subparsers(dest="command")
@@ -30,9 +33,9 @@ def main() -> None:
 
     args = parser.parse_args()
 
-    if not hasattr(args, "func"):
-        parser.print_help()
-        return
+    # if not hasattr(args, "func"):
+    #     parser.print_help()
+    #     return 1
 
     args.func(args)
 

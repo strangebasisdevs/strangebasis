@@ -2268,4 +2268,4 @@ lint = ["pylint"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "047f3be826661b70cb8b5c96b24f97af367bbe0a8b59e9c1abe923d5ad78a5f7"
+content-hash = "615a7ba04be5ed626060b9bdd94428edf0bc52325aaef5099e9f7543417049aa"

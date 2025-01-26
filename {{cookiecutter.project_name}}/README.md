@@ -101,4 +101,4 @@ Please answer the following questions to help define the usage of your project:
 
 ## Contact
 
-- Author: [Author Name](mailto:skylar.donlevy.dev@gmail.com)
+- Author: [Author Name](https://github.com/strangebasis)

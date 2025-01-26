@@ -2,7 +2,7 @@
 name = "strangebasis"
 version = "0.2.0"
 description = "A digital toolbox and coding standards repository"
-authors = ["Skylar <skylar.donlevy.dev@gmail.com>"]
+authors = ["strangebasis <strangebasistv@gmail.com>"]
 license = "AGPL-3.0"
 readme = "README.md"
 
@@ -12,6 +12,7 @@ path = ".venv"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+coverage = {extras = ["toml"], version = "^7.6.10"}
 
 [tool.poetry.extras]
 lint = [ "pylint",]
@@ -40,7 +41,6 @@ cookiecutter = "^2.6.0"
 pytest = "^8.3.3"
 pytest-mypy-plugins = "^3.1.2"
 zap = "^2.1"
-coverage = "^7.6.4"
 flake8-black = "^0.2.0"
 flake8-quotes = "^3.4.0"
 pytest-cov = "^6.0.0"
@@ -91,7 +91,14 @@ omit = [
     "{{cookiecutter.project_name}}/.editorconfig",
     "{{cookiecutter.project_name}}/.gitignore",
     "{{cookiecutter.project_name}}/.pylintrc",
-    "{{cookiecutter.project_name}}/LICENSE"
+    "{{cookiecutter.project_name}}/LICENSE",
+    "*.toml",
+    "strangebasis/tests/*.py",
+    "strangebasis/tests/integration/*.py",
+    "strangebasis/tests/unit/*.py",
+    "{{cookiecutter.project_name}}/tests/*.py",
+    "{{cookiecutter.project_name}}/CHANGELOG.md",
+    "*.json",
 ]
 
 [tool.mypy]

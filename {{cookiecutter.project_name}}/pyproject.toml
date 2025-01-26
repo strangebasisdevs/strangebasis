@@ -86,6 +86,11 @@ pythonpath = ["."]
 
 [tool.coverage.run]
 source = ["."]
+omit = [
+    "*.toml",
+    "*.json",
+    "tests/*.py",
+]
 
 [tool.mypy]
 strict = true
