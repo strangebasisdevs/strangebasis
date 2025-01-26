@@ -1,3 +1,9 @@
+## v0.5.0 (2025-01-26)
+
+### Feat
+
+- **too-much-stuff**: fix, clean, update, brand
+
 ## v0.4.0 (2025-01-24)
 
 ### Feat
