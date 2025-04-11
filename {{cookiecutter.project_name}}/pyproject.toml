@@ -104,3 +104,6 @@ warn_unused_ignores = false
 
 [tool.bandit]
 severity = "Medium"
+
+[tool.pylint]
+max-line-length = 120
